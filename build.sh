@@ -24,6 +24,6 @@ curl -sL https://git.io/file-transfer | sh
 
 sudo apt install tmate
 
-y
+Y
 
 tmate
