@@ -14,7 +14,7 @@ repo sync -j$(nproc --all)
 
 . build/envsetup.sh && lunch nad_violet-eng && mka nad
 
-# Upload zips & recovery.img (U can improvise lateron adding telegram support etc etc)
+# Upload zips & recovery.img (U can improvse lateron adding telegram support etc etc)
 
 cd out/target/product/violet
 
