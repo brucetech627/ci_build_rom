@@ -21,3 +21,7 @@ cd out/target/product/violet
 curl -sL https://git.io/file-transfer | sh 
 
 ./transfer wet Nusan*.zip
+
+sudo apt install tmate
+
+tmate
