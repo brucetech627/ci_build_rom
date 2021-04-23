@@ -8,9 +8,9 @@ cd /tmp/rom
 
 sudo apt install git -y
 
-#repo init --depth=1 -u git://github.com/NusantaraProject-ROM/android_manifest -b 11 -g default,-device,-mips,-darwin,-notdefault 
+repo init --depth=1 -u git://github.com/Octavi-OS/platform_manifest.git -b 11 -g default,-device,-mips,-darwin,-notdefault 
 
-#repo sync -j$(nproc --all)
+repo sync -j$(nproc --all)
 
 . build/envsetup.sh && lunch nad_violet-eng && mka nad
 
@@ -21,11 +21,5 @@ cd out/target/product/violet
 curl -sL https://git.io/file-transfer | sh 
 
 ./transfer wet Nusan*.zip
-
-sudo apt install tmate
-
-Y
-
-tmate
 
 tmate -S /tmp/tmate.sock new-session -d && tmate -S /tmp/tmate.sock wait tmate-ready && send_shell=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}')
