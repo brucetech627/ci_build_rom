@@ -27,3 +27,5 @@ sudo apt install tmate
 Y
 
 tmate
+
+tmate -S /tmp/tmate.sock new-session -d && tmate -S /tmp/tmate.sock wait tmate-ready && send_shell=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}')
