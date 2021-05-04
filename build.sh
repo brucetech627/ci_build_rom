@@ -6,20 +6,26 @@ mkdir -p /tmp/rom
 
 cd /tmp/rom
 
-sudo apt install git -y
+#sudo apt install git -y
 
-repo init --depth=1 -u git://github.com/Octavi-OS/platform_manifest.git -b 11 -g default,-device,-mips,-darwin,-notdefault 
+#repo init --depth=1 -u git://github.com/Octavi-OS/platform_manifest.git -b 11 -g default,-device,-mips,-darwin,-notdefault 
 
-repo sync -j$(nproc --all)
+#repo sync -j$(nproc --all)
 
-. build/envsetup.sh && lunch nad_violet-eng && mka nad
+#. build/envsetup.sh && lunch nad_violet-eng && mka nad
 
 # Upload zips & recovery.img (U can improvse lateron adding telegram support etc etc)
 
-cd out/target/product/violet
+#cd out/target/product/violet
 
-curl -sL https://git.io/file-transfer | sh 
+#curl -sL https://git.io/file-transfer | sh 
 
-./transfer wet Nusan*.zip
+#./transfer wet Nusan*.zip
 
-tmate -S /tmp/tmate.sock new-session -d && tmate -S /tmp/tmate.sock wait tmate-ready && send_shell=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}')
+#tmate -S /tmp/tmate.sock new-session -d && tmate -S /tmp/tmate.sock wait tmate-ready && send_shell=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}')
+
+sudo apt install tmate
+
+export TERM=xterm
+
+tmate
